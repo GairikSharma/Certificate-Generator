@@ -1,12 +1,15 @@
-import logo from './logo.svg';
 import './App.css';
+import Certificate from './components/certificate/Certificate';
 
 function App() {
   return (
     <div className="App">
-      <h1>Test</h1>
-      <h2>Test</h2>
-      <h3>Test</h3>
+        <div className="left">
+          Hello Test
+        </div>
+        <div className="right">
+          <Certificate />
+        </div>
     </div>
   );
 }

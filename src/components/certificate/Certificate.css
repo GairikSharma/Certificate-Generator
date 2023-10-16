@@ -14,7 +14,8 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-color: #f8f3f7;
+  /* background-color: #f8f3f7; */
+  background-color: white;
   border: 3px solid #00cba9;
   outline: 3px solid #00cba9;
   outline-offset: -10px;

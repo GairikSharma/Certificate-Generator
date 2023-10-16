@@ -1,11 +1,23 @@
-.certificate-div {
+.certificate-wrapper {
   width: 90%;
+  height: 550px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #00cba9;
+}
+.certificate-div {
+  width: 95%;
   height: 500px;
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;
+  justify-content: center;
   align-items: center;
   background-color: #f8f3f7;
+  border: 3px solid #00cba9;
+  outline: 3px solid #00cba9;
+  outline-offset: -10px;
 }
 .certificate-header {
   width: 100%;
@@ -32,7 +44,6 @@
 .logo-company-name img {
   width: 40px;
   height: 40px;
-  border-radius: 50%;
 }
 
 .couese-name span {
@@ -64,8 +75,10 @@
   align-items: center;
 }
 .name {
-  font-size: 24px;
+  font-size: 18px;
   font-weight: 600;
+  word-spacing: 5px;
+  letter-spacing: 5px;
 }
 .certificate-mid {
   width: 60%;
@@ -79,7 +92,54 @@
   color: #807f84;
   font-size: 18px;
   font-weight: 500;
+  text-align: center;
 }
 .note span {
-    color: #2f2f33;
+  color: #2f2f33;
+}
+.certificate-low {
+  width: 100%;
+  height: 30%;
+  background-color: transparent;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+.certificate-low-left {
+  width: 40%;
+  height: 100%;
+  background-color: transparent;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.date {
+  font-size: 18px;
+  font-weight: 600;
+  color: #022e4c;
+}
+.date-label {
+  font-size: 16px;
+  font-weight: 600;
+  color: #022e4c;
+}
+.certificate-low-right {
+  width: 40%;
+  height: 100%;
+  background-color: transparent;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.certificate-low-right img {
+  width: 180px;
+  height: 44px;
+}
+.signature-label {
+  font-size: 16px;
+  font-weight: 600;
+  color: #022e4c;
 }

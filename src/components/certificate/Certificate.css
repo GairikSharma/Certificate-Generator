@@ -159,6 +159,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  z-index: 100;
 }
 .certificate-low-right img {
   width: 180px;

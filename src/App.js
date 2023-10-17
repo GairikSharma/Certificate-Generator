@@ -55,6 +55,7 @@ function App() {
           <div className="left">
             <Navbar />
             <div className="left-forms">
+              <label>Enter company name</label>
               <Input
                 type="text"
                 placeholder="Enter Company name"
@@ -62,7 +63,6 @@ function App() {
                 id="companyname"
                 onChange={(e) => setCompanyName(e.target.value)}
               />
-
               <input
                 type="file"
                 id="logo"
@@ -77,7 +77,7 @@ function App() {
                   <AiOutlineCloudUpload />
                 </label>
               </div>
-
+              <label>Enter Candidate name</label>
               <Input
                 type="text"
                 placeholder="Enter Candidate name"
@@ -85,6 +85,8 @@ function App() {
                 id="name"
                 onChange={(e) => setName(e.target.value)}
               />
+              <label>Enter Course name</label>
+
               <Input
                 type="text"
                 placeholder="Enter Course name"
@@ -92,6 +94,8 @@ function App() {
                 id="coursename"
                 onChange={(e) => setCourseName(e.target.value)}
               />
+              <label>Enter Date</label>
+
               <Input
                 type="text"
                 placeholder="Enter Date"
@@ -99,6 +103,8 @@ function App() {
                 id="date"
                 onChange={(e) => setDate(e.target.value)}
               />
+              <label>Enter Instructor name</label>
+
               <Input
                 type="text"
                 placeholder="Enter Instructor name"

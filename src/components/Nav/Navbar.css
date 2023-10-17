@@ -9,5 +9,17 @@
     align-items: center;
 }
 .navbar-logo {
+    width: 20%;
     margin-left: 25px;
+    font-size: 18px;
+    font-weight: 400;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+}
+.certificate-logo-nav {
+    font-size: 44px;
+    color: white;
+    font-weight: 600;
 }

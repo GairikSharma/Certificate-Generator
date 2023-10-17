@@ -2,7 +2,6 @@ import React, { useContext } from "react";
 import "./Certificate.css";
 import html2canvas from "html2canvas";
 import jsPDF from "jspdf";
-import nodejs from "./nodejs.png";
 import { CertificateContext } from "../../Context";
 import { IoMdCloudDownload } from "react-icons/io";
 
@@ -26,14 +25,13 @@ function Certificate() {
     html2canvas(input, { width, height })
       .then((canvas) => {
         const imgData = canvas.toDataURL("image/png");
-        const pdf = new jsPDF("l", "mm", [width, height]); // "mm" is for millimeters
+        const pdf = new jsPDF("l", "mm", [width, height]);
         const imgProps = pdf.getImageProperties(imgData);
         const pdfWidth = pdf.internal.pageSize.getWidth();
         const pdfHeight = (imgProps.height * pdfWidth) / imgProps.width;
 
         pdf.addImage(imgData, "PNG", 0, 0, pdfWidth, pdfHeight);
         pdf.save("certificate.pdf");
-        
       })
       .catch((error) => {
         console.error("Error converting div to PDF:", error);

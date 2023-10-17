@@ -5,6 +5,7 @@ import { CertificateContext } from "./Context";
 import { ChakraProvider } from "@chakra-ui/react";
 import { Input } from "@chakra-ui/react";
 import { AiOutlineCloudUpload } from "react-icons/ai";
+import Navbar from "./components/Nav/Navbar";
 
 function App() {
   const [companyname, setCompanyName] = useState("Enter company name");
@@ -52,68 +53,72 @@ function App() {
       >
         <div className="App">
           <div className="left">
-            <Input
-              type="text"
-              placeholder="Enter Company name"
-              name="companyname"
-              id="companyname"
-              onChange={(e) => setCompanyName(e.target.value)}
-            />
+            <Navbar />
+            <div className="left-forms">
+              <Input
+                type="text"
+                placeholder="Enter Company name"
+                name="companyname"
+                id="companyname"
+                onChange={(e) => setCompanyName(e.target.value)}
+              />
 
-            <input
-              type="file"
-              id="logo"
-              class="inputfile"
-              accept="image/*"
-              onChange={handleImageChange}
-            />
-            <div className="upload-section">
-              <div>Upload Logo</div>
-              <AiOutlineCloudUpload />
-              <label for="logo">
-                Choose File
-              </label>
-            </div>
-
-            <Input
-              type="text"
-              placeholder="Enter Candidate name"
-              name="name"
-              id="name"
-              onChange={(e) => setName(e.target.value)}
-            />
-            <Input
-              type="text"
-              placeholder="Enter Course name"
-              name="coursename"
-              id="coursename"
-              onChange={(e) => setCourseName(e.target.value)}
-            />
-            <Input
-              type="text"
-              placeholder="Enter Date"
-              name="date"
-              id="date"
-              onChange={(e) => setDate(e.target.value)}
-            />
-            <Input
-              type="text"
-              placeholder="Enter Instructor name"
-              name="instructor"
-              id="instructor"
-              onChange={(e) => setInstructorName(e.target.value)}
-            />
-            <div className="upload-section">
-              <div>Upload signature</div>
-              <AiOutlineCloudUpload />
               <input
                 type="file"
-                id="signature"
-                className="inputfile"
+                id="logo"
+                class="inputfile"
                 accept="image/*"
-                onChange={uploadSignature}
+                onChange={handleImageChange}
               />
-              <label for="signature">Choose File</label>
+              <div className="upload-section">
+                <div>Upload Logo</div>
+
+                <label for="logo">
+                  <AiOutlineCloudUpload />
+                </label>
+              </div>
+
+              <Input
+                type="text"
+                placeholder="Enter Candidate name"
+                name="name"
+                id="name"
+                onChange={(e) => setName(e.target.value)}
+              />
+              <Input
+                type="text"
+                placeholder="Enter Course name"
+                name="coursename"
+                id="coursename"
+                onChange={(e) => setCourseName(e.target.value)}
+              />
+              <Input
+                type="text"
+                placeholder="Enter Date"
+                name="date"
+                id="date"
+                onChange={(e) => setDate(e.target.value)}
+              />
+              <Input
+                type="text"
+                placeholder="Enter Instructor name"
+                name="instructor"
+                id="instructor"
+                onChange={(e) => setInstructorName(e.target.value)}
+              />
+              <div className="upload-section">
+                <div>Upload signature</div>
+                <input
+                  type="file"
+                  id="signature"
+                  className="inputfile"
+                  accept="image/*"
+                  onChange={uploadSignature}
+                />
+                <label for="signature">
+                  <AiOutlineCloudUpload />
+                </label>
+              </div>
             </div>
           </div>
           <div className="right">

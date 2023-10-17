@@ -5,21 +5,45 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-color: #00cba9;
+  background-color: transparent;
   text-align: center;
+  
+}
+.certificate-div::before {
+  content: ' ';
+  position: absolute;
+  left: -100px;
+  top: -50px;
+  width: 180px;
+  height: 180px;
+  background-color: #00cba9;
+  transform: rotate(45deg);
+  z-index: 1;
+}
+.certificate-div::after {
+  content: ' ';
+  position: absolute;
+  right: -100px;
+  bottom: -50px;
+  width: 180px;
+  height: 180px;
+  background-color: #00cba9;
+  transform: rotate(45deg);
+  z-index: 1;
 }
 .certificate-div {
+  position: relative;
   width: 95%;
   height: 500px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  /* background-color: #f8f3f7; */
   background-color: white;
   border: 3px solid #00cba9;
   outline: 3px solid #00cba9;
-  outline-offset: -10px;
+  outline-offset: -12px;
+  overflow: hidden;
 }
 .certificate-header {
   width: 100%;

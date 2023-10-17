@@ -3,7 +3,7 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
 }
 .App {
   width: 100%;
@@ -18,7 +18,12 @@ body {
 .left {
   width: 35%;
   min-height: 100vh;
-  background-color: pink;
+  background-color: transparent;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 25px;
 }
 .right {
   width: 65%;
@@ -26,17 +31,52 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
-  align-items: center;
+  align-items: flex-end;
+  padding-right: 34px;
 }
 .generate-button {
-  width: 120px;
+  width: 150px;
   height: 44px;
-  background-color: rgb(80, 197, 255);
+  background-color: rgb(5, 132, 37);
   color: white;
   font: 500;
   border: none;
   border-radius: 12px;
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.inputfile {
+  width: 0.1px;
+  height: 0.1px;
+  opacity: 0;
+  overflow: hidden;
   position: absolute;
-  top: 2rem;
-  right: 3rem;
+  z-index: -1;
+}
+.inputfile + label {
+  font-size: 14px;
+  font-weight: 600;
+  display: inline-block;
+}
+.inputfile + label {
+  cursor: pointer; /* "hand" cursor */
+}
+input[type=text] {
+  width: 70%;
+  border: 0.5px solid grey;
+}
+.upload-section {
+  width: 70%;
+  height: 44px;
+  background: transparent;
+  display: flex;
+  flex-direction: row;
+  justify-content: start;
+  align-items: center;
+  gap: 10px;
+  padding-left: 20px;
+  border: 0.5px solid grey;
+  border-radius: 7px;
 }

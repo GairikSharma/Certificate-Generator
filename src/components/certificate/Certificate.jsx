@@ -4,10 +4,18 @@ import html2canvas from "html2canvas";
 import jsPDF from "jspdf";
 import nodejs from "./nodejs.png";
 import { CertificateContext } from "../../Context";
+import { IoMdCloudDownload } from "react-icons/io";
 
 function Certificate() {
-  const { companyname, name, coursename, date, instructorname, selectedImage, selectedSignature } =
-    useContext(CertificateContext);
+  const {
+    companyname,
+    name,
+    coursename,
+    date,
+    instructorname,
+    selectedImage,
+    selectedSignature,
+  } = useContext(CertificateContext);
 
   const convertToPDF = () => {
     const input = document.getElementById("c");
@@ -25,6 +33,7 @@ function Certificate() {
 
         pdf.addImage(imgData, "PNG", 0, 0, pdfWidth, pdfHeight);
         pdf.save("certificate.pdf");
+        
       })
       .catch((error) => {
         console.error("Error converting div to PDF:", error);
@@ -33,6 +42,7 @@ function Certificate() {
   return (
     <>
       <button className="generate-button" onClick={convertToPDF}>
+        <IoMdCloudDownload />
         Download
       </button>
       <div className="certificate-wrapper" id="c">
@@ -53,8 +63,7 @@ function Certificate() {
 
           <div className="certificate-mid">
             <div className="note">
-              Has successfully completed <span>{coursename}</span>{" "}
-              Training
+              Has successfully completed <span>{coursename}</span> Training
             </div>
           </div>
 
@@ -66,9 +75,9 @@ function Certificate() {
 
             <div className="certificate-low-right">
               <div className="signature">
-                {
-                  selectedSignature && <img src={selectedSignature} alt="signature" />
-                }
+                {selectedSignature && (
+                  <img src={selectedSignature} alt="signature" />
+                )}
               </div>
               <div className="certificate-issuing-name">{instructorname}</div>
               <div className="signature-label">Instructor</div>
